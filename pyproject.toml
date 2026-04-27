@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llada-bert"
+version = "0.1.0"
+description = "Laptop-scale LLaDA-inspired text diffusion with pretrained BERT"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "torch>=2.2",
+  "transformers>=4.39",
+  "datasets>=2.18",
+  "tqdm>=4.66",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
