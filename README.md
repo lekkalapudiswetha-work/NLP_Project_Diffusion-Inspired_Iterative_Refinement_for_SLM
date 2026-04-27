@@ -23,6 +23,7 @@ This is inspired by LLaDA-style iterative denoising, but intentionally simplifie
 |-- LICENSE
 |-- README.md
 |-- notebooks/
+|   |-- evaluation_and_plots_colab.ipynb
 |   |-- inference_and_ablations_colab.ipynb
 |   `-- train_llada_bert_colab.ipynb
 |-- pyproject.toml
@@ -77,6 +78,7 @@ The script prints JSON containing:
 
 - `notebooks/train_llada_bert_colab.ipynb` fine-tunes BERT with a diffusion-style masking objective and then runs iterative denoising generation.
 - `notebooks/inference_and_ablations_colab.ipynb` focuses on loading a base or fine-tuned checkpoint for generation and small ablation sweeps.
+- `notebooks/evaluation_and_plots_colab.ipynb` visualizes convergence logs, compares ablation settings, and plots confidence and masking trends.
 
 ## Design notes
 
