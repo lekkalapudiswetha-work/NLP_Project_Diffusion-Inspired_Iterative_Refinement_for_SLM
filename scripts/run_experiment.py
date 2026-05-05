@@ -14,6 +14,18 @@ from llada_bert import AblationRunner, ExperimentConfig
 from llada_bert.data import load_experiment_texts
 
 
+def default_device() -> str:
+    try:
+        import torch
+    except ImportError:
+        return "cpu"
+    if torch.cuda.is_available():
+        return "cuda"
+    if torch.backends.mps.is_available():
+        return "mps"
+    return "cpu"
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Run a small BERT diffusion text experiment")
     parser.add_argument("--prompt", type=str)
@@ -22,8 +34,13 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--dataset-config", type=str)
     parser.add_argument("--dataset-split", type=str, default="train")
     parser.add_argument("--text-column", type=str, default="text")
-    parser.add_argument("--model-name", type=str, default="bert-base-uncased")
-    parser.add_argument("--device", type=str, default="cpu")
+    parser.add_argument(
+        "--model-name",
+        type=str,
+        default="bert-base-uncased",
+        help="HF model id or local checkpoint directory, e.g. artifacts/llada_bert_finetuned",
+    )
+    parser.add_argument("--device", type=str, default=default_device())
     parser.add_argument("--task-type", type=str, default="iterative_generation")
     parser.add_argument("--schedule-type", type=str, default="linear")
     parser.add_argument("--steps", type=int, default=12)

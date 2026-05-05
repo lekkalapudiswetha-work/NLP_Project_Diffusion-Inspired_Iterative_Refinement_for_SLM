@@ -23,6 +23,14 @@ from llada_bert import (  # noqa: E402
 )
 
 
+def default_device() -> str:
+    if torch.cuda.is_available():
+        return "cuda"
+    if torch.backends.mps.is_available():
+        return "mps"
+    return "cpu"
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Fine-tune BERT with a diffusion-style masking objective")
     parser.add_argument("--model-name", type=str, default="bert-base-uncased")
@@ -47,7 +55,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--min-mask-ratio", type=float, default=0.15)
     parser.add_argument("--max-mask-ratio", type=float, default=0.7)
     parser.add_argument("--seed", type=int, default=42)
-    parser.add_argument("--device", type=str, default="cuda" if torch.cuda.is_available() else "cpu")
+    parser.add_argument("--device", type=str, default=default_device())
     return parser
 
 
@@ -107,6 +115,7 @@ def main() -> None:
         save_strategy="steps",
         report_to="none",
         fp16=torch.cuda.is_available() and args.device.startswith("cuda"),
+        dataloader_pin_memory=args.device.startswith("cuda"),
         remove_unused_columns=False,
         seed=args.seed,
         do_train=True,
