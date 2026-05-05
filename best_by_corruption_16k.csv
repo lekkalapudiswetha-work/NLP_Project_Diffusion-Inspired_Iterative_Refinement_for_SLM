@@ -1,0 +1,6 @@
+task_type,steps,threshold,corruption_rate,enable_thresholding,enable_remasking,diffusion_bleu,baseline_bleu,bleu_delta,diffusion_rouge1,baseline_rouge1,rouge1_delta,final_masked_tokens,final_mean_confidence
+denoising,5,0.5,0.1,True,False,0.3849,0.349,0.0359,0.4142,0.3847,0.0296,4.0,0.6696
+denoising,15,0.6,0.3,True,False,0.3399,0.2948,0.0451,0.3734,0.3414,0.0319,10.0,0.6824
+denoising,25,0.5,0.5,True,False,0.2273,0.1873,0.04,0.2979,0.2545,0.0434,7.0,0.6799
+denoising,25,0.7,0.6,True,False,0.281,0.2048,0.0762,0.3344,0.241,0.0934,42.0,0.5567
+denoising,30,0.6,0.7,True,False,0.2088,0.1568,0.0519,0.2739,0.2137,0.0602,52.0,0.5133

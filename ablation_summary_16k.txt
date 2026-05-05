@@ -1,0 +1,23 @@
+Top 10 by BLEU delta
+steps=25, threshold=0.7, corruption=0.6, bleu_delta=0.0762, diffusion_bleu=0.281, baseline_bleu=0.2048
+steps=30, threshold=0.6, corruption=0.7, bleu_delta=0.0519, diffusion_bleu=0.2088, baseline_bleu=0.1568
+steps=15, threshold=0.6, corruption=0.3, bleu_delta=0.0451, diffusion_bleu=0.3399, baseline_bleu=0.2948
+steps=25, threshold=0.5, corruption=0.5, bleu_delta=0.04, diffusion_bleu=0.2273, baseline_bleu=0.1873
+steps=3, threshold=0.7, corruption=0.7, bleu_delta=0.038, diffusion_bleu=0.2415, baseline_bleu=0.2035
+steps=5, threshold=0.5, corruption=0.1, bleu_delta=0.0359, diffusion_bleu=0.3849, baseline_bleu=0.349
+steps=20, threshold=0.6, corruption=0.6, bleu_delta=0.0348, diffusion_bleu=0.1945, baseline_bleu=0.1596
+steps=20, threshold=0.5, corruption=0.6, bleu_delta=0.0302, diffusion_bleu=0.2085, baseline_bleu=0.1783
+steps=10, threshold=0.5, corruption=0.5, bleu_delta=0.0292, diffusion_bleu=0.2931, baseline_bleu=0.264
+steps=15, threshold=0.6, corruption=0.5, bleu_delta=0.028, diffusion_bleu=0.2703, baseline_bleu=0.2422
+
+Top 10 by diffusion BLEU
+steps=65, threshold=0.7, corruption=0.1, diffusion_bleu=0.4304, baseline_bleu=0.4304, bleu_delta=0.0
+steps=65, threshold=0.9, corruption=0.1, diffusion_bleu=0.4289, baseline_bleu=0.4201, bleu_delta=0.0088
+steps=3, threshold=0.6, corruption=0.1, diffusion_bleu=0.425, baseline_bleu=0.4179, bleu_delta=0.007
+steps=30, threshold=0.5, corruption=0.1, diffusion_bleu=0.4203, baseline_bleu=0.4177, bleu_delta=0.0027
+steps=1, threshold=0.6, corruption=0.1, diffusion_bleu=0.4162, baseline_bleu=0.4203, bleu_delta=-0.0041
+steps=15, threshold=0.9, corruption=0.1, diffusion_bleu=0.4137, baseline_bleu=0.4209, bleu_delta=-0.0072
+steps=3, threshold=0.9, corruption=0.1, diffusion_bleu=0.411, baseline_bleu=0.4203, bleu_delta=-0.0093
+steps=15, threshold=0.7, corruption=0.1, diffusion_bleu=0.4104, baseline_bleu=0.4104, bleu_delta=0.0
+steps=3, threshold=0.8, corruption=0.1, diffusion_bleu=0.41, baseline_bleu=0.41, bleu_delta=0.0001
+steps=20, threshold=0.8, corruption=0.1, diffusion_bleu=0.3876, baseline_bleu=0.3855, bleu_delta=0.0021
