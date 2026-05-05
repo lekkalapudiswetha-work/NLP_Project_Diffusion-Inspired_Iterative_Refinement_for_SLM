@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="620" viewBox="0 0 860 620">
+<style>text{font-family:Arial,sans-serif;fill:#222}.title{font-size:22px;font-weight:bold}.small{font-size:12px}.label{font-size:14px}.axis{stroke:#444;stroke-width:1}.grid{stroke:#ddd;stroke-width:1}.zero{stroke:#999;stroke-dasharray:4 4}</style>
+<rect width="100%" height="100%" fill="white"/>
+<text x="40" y="36" class="title">Matched Settings Across Data Sizes (corruption=0.1)</text>
+<text x="40" y="58" class="label">Each line is one exact setting: same steps and threshold, tracked across 4k → 16k → fullwiki</text>
+<line x1="80" y1="540.0" x2="820" y2="540.0" class="grid"/>
+<text x="20" y="544.0" class="small">-0.07</text>
+<line x1="80" y1="430.0" x2="820" y2="430.0" class="grid"/>
+<text x="20" y="434.0" class="small">-0.05</text>
+<line x1="80" y1="320.0" x2="820" y2="320.0" class="grid"/>
+<text x="20" y="324.0" class="small">-0.02</text>
+<line x1="80" y1="210.0" x2="820" y2="210.0" class="grid"/>
+<text x="20" y="214.0" class="small">-0.00</text>
+<line x1="80" y1="100.0" x2="820" y2="100.0" class="grid"/>
+<text x="20" y="104.0" class="small">0.02</text>
+<line x1="80" y1="199.55849889624727" x2="820" y2="199.55849889624727" class="zero"/>
+<line x1="150" y1="100" x2="150" y2="540" class="axis"/>
+<text x="128" y="564" class="label">4k</text>
+<line x1="420" y1="100" x2="420" y2="540" class="axis"/>
+<text x="398" y="564" class="label">16k</text>
+<line x1="690" y1="100" x2="690" y2="540" class="axis"/>
+<text x="668" y="564" class="label">fullwiki</text>
+<text x="560" y="76" class="small">color = steps</text>
+<line x1="560" y1="94" x2="578" y2="94" stroke="#1f77b4" stroke-width="3"/>
+<text x="584" y="98" class="small">steps=1</text>
+<line x1="560" y1="112" x2="578" y2="112" stroke="#ff7f0e" stroke-width="3"/>
+<text x="584" y="116" class="small">steps=3</text>
+<line x1="560" y1="130" x2="578" y2="130" stroke="#2ca02c" stroke-width="3"/>
+<text x="584" y="134" class="small">steps=5</text>
+<line x1="560" y1="148" x2="578" y2="148" stroke="#d62728" stroke-width="3"/>
+<text x="584" y="152" class="small">steps=10</text>
+<text x="690" y="76" class="small">dash = threshold</text>
+<line x1="690" y1="94" x2="708" y2="94" stroke="#555" stroke-width="3"/>
+<text x="714" y="98" class="small">threshold=0.7</text>
+<line x1="690" y1="112" x2="708" y2="112" stroke="#555" stroke-width="3" stroke-dasharray="6 4"/>
+<text x="714" y="116" class="small">threshold=0.8</text>
+<line x1="690" y1="130" x2="708" y2="130" stroke="#555" stroke-width="3" stroke-dasharray="2 4"/>
+<text x="714" y="134" class="small">threshold=0.9</text>
+<polyline fill="none" stroke="#1f77b4" stroke-width="2.4" points="150,377.3 420,390.4 690,237.9"/>
+<circle cx="150" cy="377.3" r="3.2" fill="#1f77b4"/>
+<circle cx="420" cy="390.4" r="3.2" fill="#1f77b4"/>
+<circle cx="690" cy="237.9" r="3.2" fill="#1f77b4"/>
+<text x="700" y="241.9" class="small">s1-t0.7</text>
+<polyline fill="none" stroke="#1f77b4" stroke-width="2.4" stroke-dasharray="6 4" points="150,148.6 420,196.6 690,269.0"/>
+<circle cx="150" cy="148.6" r="3.2" fill="#1f77b4"/>
+<circle cx="420" cy="196.6" r="3.2" fill="#1f77b4"/>
+<circle cx="690" cy="269.0" r="3.2" fill="#1f77b4"/>
+<text x="700" y="273.0" class="small">s1-t0.8</text>
+<polyline fill="none" stroke="#1f77b4" stroke-width="2.4" stroke-dasharray="2 4" points="150,204.9 420,207.3 690,289.4"/>
+<circle cx="150" cy="204.9" r="3.2" fill="#1f77b4"/>
+<circle cx="420" cy="207.3" r="3.2" fill="#1f77b4"/>
+<circle cx="690" cy="289.4" r="3.2" fill="#1f77b4"/>
+<text x="700" y="293.4" class="small">s1-t0.9</text>
+<polyline fill="none" stroke="#ff7f0e" stroke-width="2.4" points="150,190.8 420,171.9 690,401.6"/>
+<circle cx="150" cy="190.8" r="3.2" fill="#ff7f0e"/>
+<circle cx="420" cy="171.9" r="3.2" fill="#ff7f0e"/>
+<circle cx="690" cy="401.6" r="3.2" fill="#ff7f0e"/>
+<text x="700" y="405.6" class="small">s3-t0.7</text>
+<polyline fill="none" stroke="#ff7f0e" stroke-width="2.4" stroke-dasharray="6 4" points="150,391.4 420,216.1 690,187.4"/>
+<circle cx="150" cy="391.4" r="3.2" fill="#ff7f0e"/>
+<circle cx="420" cy="216.1" r="3.2" fill="#ff7f0e"/>
+<circle cx="690" cy="187.4" r="3.2" fill="#ff7f0e"/>
+<text x="700" y="191.4" class="small">s3-t0.8</text>
+<polyline fill="none" stroke="#ff7f0e" stroke-width="2.4" stroke-dasharray="2 4" points="150,248.6 420,100.0 690,275.8"/>
+<circle cx="150" cy="248.6" r="3.2" fill="#ff7f0e"/>
+<circle cx="420" cy="100.0" r="3.2" fill="#ff7f0e"/>
+<circle cx="690" cy="275.8" r="3.2" fill="#ff7f0e"/>
+<text x="700" y="279.8" class="small">s3-t0.9</text>
+<polyline fill="none" stroke="#2ca02c" stroke-width="2.4" points="150,540.0 420,225.8 690,255.4"/>
+<circle cx="150" cy="540.0" r="3.2" fill="#2ca02c"/>
+<circle cx="420" cy="225.8" r="3.2" fill="#2ca02c"/>
+<circle cx="690" cy="255.4" r="3.2" fill="#2ca02c"/>
+<text x="700" y="259.4" class="small">s5-t0.7</text>
+<polyline fill="none" stroke="#2ca02c" stroke-width="2.4" stroke-dasharray="6 4" points="150,199.1 420,251.0 690,208.8"/>
+<circle cx="150" cy="199.1" r="3.2" fill="#2ca02c"/>
+<circle cx="420" cy="251.0" r="3.2" fill="#2ca02c"/>
+<circle cx="690" cy="208.8" r="3.2" fill="#2ca02c"/>
+<text x="700" y="212.8" class="small">s5-t0.8</text>
+<polyline fill="none" stroke="#2ca02c" stroke-width="2.4" stroke-dasharray="2 4" points="150,238.9 420,206.4 690,239.4"/>
+<circle cx="150" cy="238.9" r="3.2" fill="#2ca02c"/>
+<circle cx="420" cy="206.4" r="3.2" fill="#2ca02c"/>
+<circle cx="690" cy="239.4" r="3.2" fill="#2ca02c"/>
+<text x="700" y="243.4" class="small">s5-t0.9</text>
+<polyline fill="none" stroke="#d62728" stroke-width="2.4" points="150,369.5 420,219.0 690,165.6"/>
+<circle cx="150" cy="369.5" r="3.2" fill="#d62728"/>
+<circle cx="420" cy="219.0" r="3.2" fill="#d62728"/>
+<circle cx="690" cy="165.6" r="3.2" fill="#d62728"/>
+<text x="700" y="169.6" class="small">s10-t0.7</text>
+<polyline fill="none" stroke="#d62728" stroke-width="2.4" stroke-dasharray="6 4" points="150,207.3 420,199.6 690,203.9"/>
+<circle cx="150" cy="207.3" r="3.2" fill="#d62728"/>
+<circle cx="420" cy="199.6" r="3.2" fill="#d62728"/>
+<circle cx="690" cy="203.9" r="3.2" fill="#d62728"/>
+<text x="700" y="207.9" class="small">s10-t0.8</text>
+<polyline fill="none" stroke="#d62728" stroke-width="2.4" stroke-dasharray="2 4" points="150,256.9 420,211.2 690,217.0"/>
+<circle cx="150" cy="256.9" r="3.2" fill="#d62728"/>
+<circle cx="420" cy="211.2" r="3.2" fill="#d62728"/>
+<circle cx="690" cy="217.0" r="3.2" fill="#d62728"/>
+<text x="700" y="221.0" class="small">s10-t0.9</text>
+<text x="390.0" y="604" class="label">training data size</text>
+<text x="18" y="310.0" transform="rotate(-90 18 310.0)" class="label">BLEU delta</text>
+</svg>

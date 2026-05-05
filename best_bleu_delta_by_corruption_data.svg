@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+<style>text{font-family:Arial,sans-serif;fill:#222}.title{font-size:22px;font-weight:bold}.subtitle{font-size:13px;fill:#555}.label{font-size:14px}.small{font-size:12px}.axis{stroke:#444;stroke-width:1}.grid{stroke:#ddd;stroke-width:1}.zero{stroke:#999;stroke-dasharray:4 4}</style>
+<rect width="100%" height="100%" fill="white"/>
+<text x="50" y="34" class="title">Best BLEU Delta by Corruption and Training Data</text>
+<text x="50" y="56" class="subtitle">Best setting within each corruption bucket for 16k vs full usable WikiText-2</text>
+<line x1="70" y1="450.0" x2="860" y2="450.0" class="grid"/>
+<text x="12" y="454.0" class="small">0.00</text>
+<line x1="70" y1="360.0" x2="860" y2="360.0" class="grid"/>
+<text x="12" y="364.0" class="small">0.02</text>
+<line x1="70" y1="270.0" x2="860" y2="270.0" class="grid"/>
+<text x="12" y="274.0" class="small">0.04</text>
+<line x1="70" y1="180.0" x2="860" y2="180.0" class="grid"/>
+<text x="12" y="184.0" class="small">0.06</text>
+<line x1="70" y1="90.0" x2="860" y2="90.0" class="grid"/>
+<text x="12" y="94.0" class="small">0.08</text>
+<line x1="70" y1="450.0" x2="860" y2="450.0" class="zero"/>
+<line x1="70" y1="90" x2="70" y2="450" class="axis"/>
+<line x1="70" y1="450" x2="860" y2="450" class="axis"/>
+<rect x="109.5" y="280.3937007874016" width="55.300000000000004" height="169.6062992125984" fill="#1f77b4" opacity="0.9"/>
+<text x="125.15" y="274.3937007874016" class="small">0.036</text>
+<rect x="176.8" y="286.53543307086613" width="55.300000000000004" height="163.46456692913387" fill="#d62728" opacity="0.9"/>
+<text x="192.45000000000002" y="280.53543307086613" class="small">0.035</text>
+<text x="164.8" y="472" class="label">corr=0.1</text>
+<rect x="307.0" y="236.92913385826773" width="55.300000000000004" height="213.07086614173227" fill="#1f77b4" opacity="0.9"/>
+<text x="322.65" y="230.92913385826773" class="small">0.045</text>
+<rect x="374.3" y="238.8188976377953" width="55.300000000000004" height="211.1811023622047" fill="#d62728" opacity="0.9"/>
+<text x="389.95" y="232.8188976377953" class="small">0.045</text>
+<text x="362.3" y="472" class="label">corr=0.3</text>
+<rect x="504.5" y="261.0236220472441" width="55.300000000000004" height="188.9763779527559" fill="#1f77b4" opacity="0.9"/>
+<text x="520.15" y="255.0236220472441" class="small">0.040</text>
+<rect x="571.8" y="237.40157480314963" width="55.300000000000004" height="212.59842519685037" fill="#d62728" opacity="0.9"/>
+<text x="587.4499999999999" y="231.40157480314963" class="small">0.045</text>
+<text x="559.8" y="472" class="label">corr=0.5</text>
+<rect x="702.0" y="90.0" width="55.300000000000004" height="360.0" fill="#1f77b4" opacity="0.9"/>
+<text x="717.65" y="84.0" class="small">0.076</text>
+<rect x="769.3" y="297.8740157480315" width="55.300000000000004" height="152.12598425196848" fill="#d62728" opacity="0.9"/>
+<text x="784.9499999999999" y="291.8740157480315" class="small">0.032</text>
+<text x="757.3" y="472" class="label">corr=0.6</text>
+<rect x="700" y="62" width="14" height="14" fill="#1f77b4"/>
+<text x="720" y="73" class="small">16k</text>
+<rect x="700" y="80" width="14" height="14" fill="#d62728"/>
+<text x="720" y="91" class="small">fullwiki</text>
+<text x="420.0" y="502" class="label">corruption rate</text>
+<text x="18" y="260.0" transform="rotate(-90 18 260.0)" class="label">best BLEU delta</text>
+</svg>
