@@ -5,12 +5,22 @@ from dataclasses import dataclass
 class ExperimentConfig:
     model_name: str = "bert-base-uncased"
     device: str = "cpu"
+    dataset_name: str = "wikitext"
+    dataset_config: str = "wikitext-2-raw-v1"
+    dataset_split: str = "validation"
+    text_column: str = "text"
+    task_type: str = "iterative_generation"
+    schedule_type: str = "linear"
     max_length: int = 32
     steps: int = 12
     sequence_length: int = 24
     temperature: float = 1.0
     threshold: float = 0.85
+    corruption_rate: float = 0.3
     remask_strategy: str = "low_confidence"
+    enable_thresholding: bool = True
+    enable_remasking: bool = True
+    enable_progressive_masking: bool = True
     top_k: int = 25
     seed: int = 0
     num_samples: int = 2
