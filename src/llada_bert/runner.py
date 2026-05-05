@@ -32,13 +32,45 @@ class AblationRunner:
             schedule_type=cfg["schedule_type"],
         )
 
+    def _resolved_cfg(self, overrides: dict | None = None) -> dict:
+        cfg = asdict(self.config)
+        if overrides:
+            cfg.update(overrides)
+        if cfg["task_type"] == "denoising" and "enable_remasking" not in (overrides or {}):
+            cfg["enable_remasking"] = False
+        return cfg
+
+    def _compact_summary(self, result: dict) -> dict:
+        diffusion_summary = result["diffusion"]["summary"]
+        baseline_summary = result["baseline"]["summary"]
+        return {
+            "task_type": result["task"]["task_type"],
+            "steps": result["config"]["steps"],
+            "threshold": result["config"]["threshold"],
+            "corruption_rate": result["config"]["corruption_rate"],
+            "enable_thresholding": result["config"]["enable_thresholding"],
+            "enable_remasking": result["config"]["enable_remasking"],
+            "diffusion_bleu": round(diffusion_summary.get("bleu", 0.0), 4),
+            "baseline_bleu": round(baseline_summary.get("bleu", 0.0), 4),
+            "bleu_delta": round(
+                diffusion_summary.get("bleu", 0.0) - baseline_summary.get("bleu", 0.0),
+                4,
+            ),
+            "diffusion_rouge1": round(diffusion_summary.get("rouge1", 0.0), 4),
+            "baseline_rouge1": round(baseline_summary.get("rouge1", 0.0), 4),
+            "rouge1_delta": round(
+                diffusion_summary.get("rouge1", 0.0) - baseline_summary.get("rouge1", 0.0),
+                4,
+            ),
+            "final_masked_tokens": diffusion_summary.get("final_masked_tokens", 0.0),
+            "final_mean_confidence": round(diffusion_summary.get("final_mean_confidence", 0.0), 4),
+        }
+
     def run_single(self, prompt: str, overrides: dict | None = None) -> dict:
         return self.run_task_batch([prompt], overrides=overrides)
 
     def run_task_batch(self, texts: list[str], overrides: dict | None = None) -> dict:
-        cfg = asdict(self.config)
-        if overrides:
-            cfg.update(overrides)
+        cfg = self._resolved_cfg(overrides)
 
         scheduler = self._make_scheduler(cfg)
         task_builder = TaskBuilder(self.model, scheduler)
@@ -75,7 +107,7 @@ class AblationRunner:
         diffusion_metrics = aggregate_text_metrics(diffusion_result.texts, task_batch.reference_texts)
         baseline_metrics = aggregate_text_metrics(baseline_result.texts, task_batch.reference_texts)
 
-        return {
+        result = {
             "config": cfg,
             "task": {
                 "task_type": task_batch.task_type,
@@ -99,14 +131,19 @@ class AblationRunner:
                 },
             },
         }
+        result["comparison"] = self._compact_summary(result)
+        return result
 
     def run_ablation_grid(self, prompt: str, grid: dict[str, list]) -> list[dict]:
         return self.run_task_ablation_grid([prompt], grid)
 
-    def run_task_ablation_grid(self, texts: list[str], grid: dict[str, list]) -> list[dict]:
+    def run_task_ablation_grid(self, texts: list[str], grid: dict[str, list]) -> dict:
         keys = list(grid.keys())
         results = []
         for values in product(*(grid[key] for key in keys)):
             overrides = dict(zip(keys, values))
             results.append(self.run_task_batch(texts, overrides=overrides))
-        return results
+        return {
+            "results": results,
+            "comparison_table": [item["comparison"] for item in results],
+        }

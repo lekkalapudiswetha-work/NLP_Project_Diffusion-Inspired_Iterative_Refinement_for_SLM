@@ -14,6 +14,18 @@ from llada_bert import AblationRunner, ExperimentConfig
 from llada_bert.data import load_experiment_texts
 
 
+class CompactJSONEncoder(json.JSONEncoder):
+    def default(self, obj):
+        try:
+            import numpy as np
+
+            if isinstance(obj, np.generic):
+                return obj.item()
+        except ImportError:
+            pass
+        return super().default(obj)
+
+
 def default_device() -> str:
     try:
         import torch
@@ -112,7 +124,7 @@ def main() -> None:
     else:
         output = runner.run_task_batch(texts)
 
-    print(json.dumps(output, indent=2))
+    print(json.dumps(output, indent=2, cls=CompactJSONEncoder))
 
 
 if __name__ == "__main__":
