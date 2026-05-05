@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+<style>
+.bg { fill: #fffdf8; }
+.title { font: 700 24px Arial, sans-serif; fill: #1f2937; }
+.label { font: 14px Arial, sans-serif; fill: #374151; }
+.small { font: 12px Arial, sans-serif; fill: #4b5563; }
+.value { font: 700 12px Arial, sans-serif; fill: #111827; }
+.axis { stroke: #6b7280; stroke-width: 1; }
+.grid { stroke: #e5e7eb; stroke-width: 1; }
+.legend { font: 13px Arial, sans-serif; fill: #374151; }
+</style>
+<rect class="bg" x="0" y="0" width="900" height="520"/>
+<text class="title" x="90" y="40">Training Objective Improves With More Data</text>
+<line class="grid" x1="90" y1="430.0" x2="860" y2="430.0"/>
+<text class="small" x="80" y="434.0" text-anchor="end">3.4</text>
+<line class="grid" x1="90" y1="350.0" x2="860" y2="350.0"/>
+<text class="small" x="80" y="354.0" text-anchor="end">3.5</text>
+<line class="grid" x1="90" y1="270.0" x2="860" y2="270.0"/>
+<text class="small" x="80" y="274.0" text-anchor="end">3.6</text>
+<line class="grid" x1="90" y1="190.0" x2="860" y2="190.0"/>
+<text class="small" x="80" y="194.0" text-anchor="end">3.7</text>
+<line class="grid" x1="90" y1="110.0" x2="860" y2="110.0"/>
+<text class="small" x="80" y="114.0" text-anchor="end">3.8</text>
+<line class="axis" x1="90" y1="430" x2="860" y2="430"/>
+<line class="axis" x1="90" y1="70" x2="90" y2="430"/>
+<text class="label" transform="translate(24,250.0) rotate(-90)" text-anchor="middle">Eval loss</text>
+<rect x="132.3" y="166.5" width="107.8" height="263.5" rx="6" fill="#6C8AE4"/>
+<text class="value" x="186.2" y="158.5" text-anchor="middle">3.729</text>
+<text class="label" x="186.2" y="454" text-anchor="middle">4k</text>
+<text class="label" x="186.2" y="472" text-anchor="middle">WikiText-2</text>
+<rect x="324.9" y="201.9" width="107.8" height="228.1" rx="6" fill="#4DB6AC"/>
+<text class="value" x="378.8" y="193.9" text-anchor="middle">3.685</text>
+<text class="label" x="378.8" y="454" text-anchor="middle">16k</text>
+<text class="label" x="378.8" y="472" text-anchor="middle">WikiText-2</text>
+<rect x="517.4" y="329.4" width="107.8" height="100.6" rx="6" fill="#FF8A65"/>
+<text class="value" x="571.2" y="321.4" text-anchor="middle">3.526</text>
+<text class="label" x="571.2" y="454" text-anchor="middle">23.8k</text>
+<text class="label" x="571.2" y="472" text-anchor="middle">WikiText-2</text>
+<rect x="709.9" y="353.4" width="107.8" height="76.6" rx="6" fill="#B565D9"/>
+<text class="value" x="763.8" y="345.4" text-anchor="middle">3.496</text>
+<text class="label" x="763.8" y="454" text-anchor="middle">64k</text>
+<text class="label" x="763.8" y="472" text-anchor="middle">WikiText-103</text>
+</svg>

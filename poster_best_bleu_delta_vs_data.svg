@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+<style>
+.bg { fill: #fffdf8; }
+.title { font: 700 24px Arial, sans-serif; fill: #1f2937; }
+.label { font: 14px Arial, sans-serif; fill: #374151; }
+.small { font: 12px Arial, sans-serif; fill: #4b5563; }
+.value { font: 700 12px Arial, sans-serif; fill: #111827; }
+.axis { stroke: #6b7280; stroke-width: 1; }
+.grid { stroke: #e5e7eb; stroke-width: 1; }
+.legend { font: 13px Arial, sans-serif; fill: #374151; }
+</style>
+<rect class="bg" x="0" y="0" width="900" height="520"/>
+<text class="title" x="90" y="40">Best Relative Gain Over Baseline</text>
+<line class="grid" x1="90" y1="430.0" x2="860" y2="430.0"/>
+<text class="small" x="80" y="434.0" text-anchor="end">0</text>
+<line class="grid" x1="90" y1="358.0" x2="860" y2="358.0"/>
+<text class="small" x="80" y="362.0" text-anchor="end">0.02</text>
+<line class="grid" x1="90" y1="286.0" x2="860" y2="286.0"/>
+<text class="small" x="80" y="290.0" text-anchor="end">0.04</text>
+<line class="grid" x1="90" y1="214.0" x2="860" y2="214.0"/>
+<text class="small" x="80" y="218.0" text-anchor="end">0.06</text>
+<line class="grid" x1="90" y1="142.0" x2="860" y2="142.0"/>
+<text class="small" x="80" y="146.0" text-anchor="end">0.08</text>
+<line class="grid" x1="90" y1="70.0" x2="860" y2="70.0"/>
+<text class="small" x="80" y="74.0" text-anchor="end">0.1</text>
+<line class="axis" x1="90" y1="430" x2="860" y2="430"/>
+<line class="axis" x1="90" y1="70" x2="90" y2="430"/>
+<text class="label" transform="translate(24,250.0) rotate(-90)" text-anchor="middle">Best BLEU delta</text>
+<rect x="132.3" y="353.0" width="107.8" height="77.0" rx="6" fill="#6C8AE4"/>
+<text class="value" x="186.2" y="345.0" text-anchor="middle">0.021</text>
+<text class="label" x="186.2" y="454" text-anchor="middle">4k</text>
+<text class="label" x="186.2" y="472" text-anchor="middle">WikiText-2</text>
+<rect x="324.9" y="155.7" width="107.8" height="274.3" rx="6" fill="#4DB6AC"/>
+<text class="value" x="378.8" y="147.7" text-anchor="middle">0.076</text>
+<text class="label" x="378.8" y="454" text-anchor="middle">16k</text>
+<text class="label" x="378.8" y="472" text-anchor="middle">WikiText-2</text>
+<rect x="517.4" y="268.0" width="107.8" height="162.0" rx="6" fill="#FF8A65"/>
+<text class="value" x="571.2" y="260.0" text-anchor="middle">0.045</text>
+<text class="label" x="571.2" y="454" text-anchor="middle">23.8k</text>
+<text class="label" x="571.2" y="472" text-anchor="middle">WikiText-2</text>
+<rect x="709.9" y="98.8" width="107.8" height="331.2" rx="6" fill="#B565D9"/>
+<text class="value" x="763.8" y="90.8" text-anchor="middle">0.092</text>
+<text class="label" x="763.8" y="454" text-anchor="middle">64k</text>
+<text class="label" x="763.8" y="472" text-anchor="middle">WikiText-103</text>
+</svg>

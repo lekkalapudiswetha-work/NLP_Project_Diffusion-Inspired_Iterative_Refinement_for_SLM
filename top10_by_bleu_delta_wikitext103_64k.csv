@@ -1,0 +1,11 @@
+task_type,steps,threshold,corruption_rate,enable_thresholding,enable_remasking,diffusion_bleu,baseline_bleu,bleu_delta,diffusion_rouge1,baseline_rouge1,rouge1_delta,final_masked_tokens,final_mean_confidence
+denoising,25,0.8,0.3,True,False,0.3853,0.2933,0.092,0.4027,0.3455,0.0572,16.0,0.6815
+denoising,25,0.5,0.1,True,False,0.3852,0.3134,0.0719,0.4154,0.3529,0.0625,1.0,0.6931
+denoising,30,0.5,0.1,True,False,0.4143,0.3588,0.0555,0.4309,0.4029,0.028,1.0,0.7015
+denoising,5,0.6,0.5,True,False,0.3156,0.2624,0.0533,0.36,0.3239,0.0361,24.0,0.6524
+denoising,30,0.7,0.5,True,False,0.2995,0.2566,0.0429,0.347,0.3233,0.0237,30.0,0.6018
+denoising,10,0.5,0.5,True,False,0.2259,0.1995,0.0264,0.2666,0.2379,0.0287,23.0,0.6465
+denoising,25,0.5,0.3,True,False,0.3307,0.3057,0.025,0.3811,0.3357,0.0453,4.0,0.7108
+denoising,1,0.5,0.5,True,False,0.2168,0.1937,0.0231,0.2842,0.2732,0.0109,38.0,0.5156
+denoising,25,0.5,0.6,True,False,0.1889,0.1666,0.0223,0.256,0.2212,0.0348,16.0,0.6607
+denoising,25,0.7,0.6,True,False,0.1843,0.1656,0.0187,0.2564,0.2576,-0.0012,43.0,0.5508

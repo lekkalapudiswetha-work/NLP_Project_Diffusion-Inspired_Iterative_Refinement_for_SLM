@@ -1,0 +1,3 @@
+rows=160
+best_bleu_delta=0.092 setting=steps:25 threshold:0.8 corruption:0.3
+best_diffusion_bleu=0.4277 setting=steps:3 threshold:0.5 corruption:0.1
