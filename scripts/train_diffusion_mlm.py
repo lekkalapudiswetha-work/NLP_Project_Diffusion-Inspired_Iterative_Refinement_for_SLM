@@ -94,7 +94,6 @@ def main() -> None:
 
     training_args = TrainingArguments(
         output_dir=args.output_dir,
-        overwrite_output_dir=True,
         per_device_train_batch_size=args.per_device_train_batch_size,
         per_device_eval_batch_size=args.per_device_eval_batch_size,
         learning_rate=args.learning_rate,
@@ -110,6 +109,8 @@ def main() -> None:
         fp16=torch.cuda.is_available() and args.device.startswith("cuda"),
         remove_unused_columns=False,
         seed=args.seed,
+        do_train=True,
+        do_eval=True,
     )
 
     trainer = Trainer(
