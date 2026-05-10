@@ -7,7 +7,6 @@
 .value { font: 700 12px Arial, sans-serif; fill: #111827; }
 .axis { stroke: #6b7280; stroke-width: 1; }
 .grid { stroke: #e5e7eb; stroke-width: 1; }
-.legend { font: 13px Arial, sans-serif; fill: #374151; }
 </style>
 <rect class="bg" x="0" y="0" width="900" height="520"/>
 <text class="title" x="90" y="40">Best Relative Gain Over Baseline</text>
